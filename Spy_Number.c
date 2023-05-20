@@ -1,9 +1,10 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
     int n,s=0,p=1,d;
     scanf("%d",&n);
-    for(;n>0;)
+    int temp=n;
+    while(n>0)
     {
         d=n%10;
         s=s+d;
@@ -11,7 +12,11 @@ int main()
         n=n/10;
     }
     if(s==p)
+    {
         printf("Spy Number");
+    }
     else
+    {
         printf("Not Spy Number");
+    }
 }
