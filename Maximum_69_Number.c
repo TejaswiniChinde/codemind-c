@@ -1,31 +1,26 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,f,s,t,i;
+    int n,d,a[100],i,j;
     scanf("%d",&n);
-    i=n%10;
-    n=n/10;
-    t=n%10;
-    n=n/10;
-    s=n%10;
-    n=n/10;
-    f=n%10;
-    n=n/10;
-    if(f==6)
+    i=0;
+    while(n!=0)
     {
-        f=9;
+        d=n%10;
+        n=n/10;
+        a[i]=d;
+        i++;
     }
-    else if(s==6)
+    for(j=i-1;j>=0;j--)
     {
-        s=9;
+        if(a[j]==6)
+        {
+            a[j]=9;
+            break;
+        }
     }
-    else if(t==6)
+    for(j=i-1;j>=0;j--)
     {
-        t=9;
+        printf("%d",a[j]);
     }
-    else if(i==6)
-    {
-        i=9;
-    }
-    printf("%d%d%d%d",f,s,t,i);
 }
