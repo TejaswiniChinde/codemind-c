@@ -9,7 +9,8 @@ int main()
         sum=(sum*10)+a%10;
         a=a/10;
     }
-    a=sum;sum=0;
+    a=sum;
+    sum=0;
     while(a!=0)
     {
         r=a%10;
